@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>STUDENT LOGIN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body background="C:\Users\krish\Downloads\bg form.jpg">
+<center>STUDENT LOGIN</center>
+<hr>
+<table align="center" cellpadding="10">
+<tr>
+<td>Firstname</td>
+<td><input type="text" name="firstname" maxlength="8" id="fname"></td>
+</tr>
+<tr>
+<td>Date ofbirth</td>
+<td><input type="date" id="dob">
+</td>
+</tr>
+<tr>
+<td>EmailId</td>
+<td><input type="text" name="Emailid" id="eid"></td>
+</tr>
+<tr>
+<td>Mobile number</td>
+<td><input type="text" name="mobileno" maxlength="10" id="mno">
+10digit number</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+  Male<input type="radio" name="Gender" id="gndr">
+Female<input type="radio" name="gender">
+</td>
+</tr>
+<tr>
+<td>Address </td>
+<td><textarea name="Address" rows="4" cols="30" id="addr">
+</textarea>
+</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td><select name="standard" id="std">
+<option value="1th">1th</option>
+<option value="2th">2th</option>
+<option value="3th">3th</option>
+<option value="4th">4th</option>
+<option value="5th">5th</option>
+<option value="6th">6th</option>
+<option value="7th">7th</option>
+<option value="8th">8th</option>
+<option value="9th">9th</option>
+<option value="10th">10th</option>
+<option value="11th">11th</option>
+<option value="12th">12th</option>
+</td>
+</tr>
+<tr>
+<td>Hobbies</td>
+<td>
+cooking
+<input type="checkbox" name="hobbies" value="cooking" id="hbs">
+swimming
+<input type="checkbox" name="hobbies" value="swimming" id="hbs">
+running
+<input type="checkbox" name="hobbies" value="Running">
+singing 
+<input type="checkbox" name="hobbies" value="singing">
+</td>
+</tr>
+<tr id="btna">
+  <td colspan="2"><input type="button" autofocus="true" size="20p" name="button" id="btn" value="submit" onclick="AddRow()" ></td>
+</tr>
+</table>
+<table align="center" border="1" cellpadding="10" id="show">
+<tr>
+<th>firstname</th>
+<th>date of birth</th>
+<th>email id</th>
+<th>mobile no</th>
+<th>gender</th>
+<th>address</th>
+<th>standard</th>
+<th>hobbies</th>
+</tr>
+</table>
+<script>
+var list1 =[];
+var list2 =[];
+var list3 =[];
+var list4= [];
+var list5= [];
+var list6 =[];
+var list7 =[];
+var list8 =[];
+
+var n=1;
+var x=0;
+
+function AddRow(){
+             var AddRown = document.getElementById('show');
+             var NewRow = AddRown.insertRow(n);
+
+	list1[x] = document.getElementById("fname").value;
+	list2[x] = document.getElementById("dob").value;
+	list3[x] = document.getElementById("eid").value;
+	list4[x] = document.getElementById("mno").value;
+	list5[x] = document.getElementById("gndr").value;
+	list6[x] = document.getElementById("addr").value;
+        list7[x] = document.getElementById("std").value;
+	list8[x] = document.getElementById("hbs").value;
+	
+	var cel1 = NewRow.insertCell(0);
+	var cel2 = NewRow.insertCell(1);
+	var cel3 = NewRow.insertCell(2);
+	var cel4 = NewRow.insertCell(3);
+	var cel5 = NewRow.insertCell(4);
+	var cel6 = NewRow.insertCell(5);
+	var cel7 = NewRow.insertCell(6);
+  	var cel8 = NewRow.insertCell(7);
+
+	cel1.innerHTML = list1[x];
+	cel2.innerHTML = list2[x];
+	cel3.innerHTML = list3[x];
+	cel4.innerHTML = list4[x];
+	cel5.innerHTML = list5[x];
+	cel6.innerHTML = list6[x];
+	cel7.innerHTML = list7[x];
+	cel8.innerHTML = list8[x];
+
+	n++;
+	x++;
+
+}
+
+</script>
+</body>
+</html>
